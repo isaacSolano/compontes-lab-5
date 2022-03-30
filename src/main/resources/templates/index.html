@@ -1,31 +1,16 @@
 <!doctype html>
 <html lang="en-US" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="utf-8"></meta>
-    <meta http-equiv="Content-Type" content="text/html"></meta>
-    <title>Spring Boot Journal</title>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html">
+    <title>Spring Boot Application</title>
 </head>
 <body>
 <div>
-    <h1>Spring Boot Journal</h1>
-    <a href="/agregarEntrada">Registrar</a>
-    <ul>
-        <div th:each="entry,status : ${journal}">
-            <li>
-                <div></div>
-                <div>
-                    <div>
-                        <h4><span th:text="${entry.title}">TITLE</span></h4>
-                        <p><small><i></i>
-                            <span th:text="${entry.createdAsShort}">CREATED</span></small></p>
-                    </div>
-                    <div class="tl-body">
-                        <p><span th:text="${entry.summary}">SUMMARY</span></p>
-                    </div>
-                </div>
-            </li>
-        </div>
-    </ul>
+    <h1>Spring Boot Application</h1>
+    <h2>Navigate between the entities you want to work with</h2>
+    <a href="/journal">Journal</a>
+    <a href="/person">Person</a>
 </div>
 </body>
 </html>

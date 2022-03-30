@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html">
+    <title>Registrar</title>
+</head>
+<body>
+    <h1>Register new Journal entity</h1>
+
+    <form action="#" th:action="@{/postJournal}" th:object="${journal}" method="post">
+        <div>
+            <label for="title">Title:</label>
+            <input type="text" th:field="*{title}" id="title" />
+        </div>
+        <div>
+            <label for="summary">Summary:</label>
+            <input type="text" th:field="*{summary}" id="summary">
+        </div>
+
+        <div>
+            <input type="submit" value="Register">
+        </div>
+    </form>
+
+    <a href="/person"><< Back</a>
+</body>
+</html>

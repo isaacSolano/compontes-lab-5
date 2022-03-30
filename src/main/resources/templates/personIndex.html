@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html">
+    <title>Spring Boot Person</title>
+</head>
+<body>
+    <h1>Spring Boot Person Entity</h1>
+    <a href="/">Home</a>
+    <a href="/addPerson">Add new</a>
+    <ul>
+        <div th:each="entry,status : ${person}">
+            <li>
+                <div>
+                    <h4><span th:text="${entry.name}">NAME</span></h4>
+                </div>
+            </li>
+        </div>
+    </ul>
+</body>
+</html>
